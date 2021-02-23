@@ -23,8 +23,14 @@ var carDetails = {
 
 //Code Here
 
-
-
+const {color} = carDetails;
+console.log(color);
+const {make} = carDetails;
+console.log(make);
+const {model} = carDetails;
+console.log(model);
+const {year} = carDetails;
+console.log(year);
 ////////// PROBLEM 2 //////////
 
 /*
@@ -35,6 +41,11 @@ var carDetails = {
 
 function greeting( obj ) {
   //Code Here
+  
+  const {firstName, lastName, title} = obj
+  
+  
+  
   
   // Do not edit the code below.
   return 'Hello, ' + title + ' ' + firstName + ' ' + lastName + '!';
@@ -55,7 +66,13 @@ function greeting( obj ) {
 
 //Code Here
 
+function totalPopulation(obj){
+let {utah, california, texas, arizona}=obj;
+// totalPopulation.reduce((acc,curr) => acc + curr);
+return utah+ california+ texas+ arizona;
+}
 
+  
 
 ////////// PROBLEM 4 //////////
 
@@ -69,7 +86,13 @@ function greeting( obj ) {
 
 //Code Here
 
+function ingredients (obj){
+  let arr = [];
+  const {carb, fat, protein}= obj;
+  arr.push(carb, fat, protein)
+  return arr
 
+}
 
 ////////// PROBLEM 5 //////////
 
@@ -86,7 +109,9 @@ function greeting( obj ) {
 */
 
 //Code Here
-
+function largeNumbers({first , second, third}){
+return Math.min(first, second, third)
+}
 
 
 ////////// PROBLEM 6 //////////
@@ -99,4 +124,9 @@ function greeting( obj ) {
 
 //Code Here
 
-
+function numberGroups({a,b,c}){
+  let arr = a;
+  arr.length < b.length ? arr = b : null;
+  arr.length < c.length ? arr = c : null;
+  return arr
+}
